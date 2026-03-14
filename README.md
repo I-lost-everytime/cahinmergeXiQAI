@@ -71,19 +71,26 @@ For the best demo experience, follow this specific operational sequence:
 
 1.  **Clone & Install**:
     ```bash
-    git clone https://github.com/your-repo/the_nigerian_prince.git
-    cd the_nigerian_prince
+    git clone https://github.com/I-lost-everytime/cahinmergeXiQAI.git
+    cd cahinmergeXiQAI
     npm install
     ```
 
 2.  **Environment Setup**:
-    Create a `.env` file:
+    Create a `.env` file in the root:
     ```env
-    OPENAI_API_KEY=your_key
-    GOOGLE_API_KEY=your_key
+    OPENAI_API_KEY=your_openai_key
+    GOOGLE_API_KEY=your_gemini_key
+    TELEGRAM_BOT_TOKEN=your_bot_token
+    TELEGRAM_CHAT_ID=your_chat_id
     ```
 
-3.  **Launch the Command Center**:
+3.  **Telegram Bot Setup (The Strategic Outpost)**:
+    *   **Create Bot**: Message [@BotFather](https://t.me/botfather) and use `/newbot` to get your `TELEGRAM_BOT_TOKEN`.
+    *   **Get Chat ID**: Start a chat with your new bot and send any message. Then visit `https://api.telegram.org/bot<YOUR_BOT_TOKEN>/getUpdates` to find the `"id"` under the `"chat"` object.
+    *   **Impact**: Once configured, the Prince will automatically signal every executed defense or alpha recapture to your Telegram.
+
+4.  **Launch the Command Center**:
     ```bash
     npm run dev
     ```
